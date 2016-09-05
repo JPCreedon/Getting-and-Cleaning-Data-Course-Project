@@ -8,15 +8,16 @@ All data are unitless since features have been normalized in the original raw da
 
 Subjects have been converted to a factor ("1"-to-"30"")
 
-Activities have been transformed with their related label found in the 'activity_labels.txt' file of the original dataset and coded as a factor ("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING")
-
 For all original features that were a mean and a standard deviation, the mean across subject and activity has been calculated and stored in a variable named with the same label of the feature as found in the 'features.txt' file of original dataset , with the belief/hope to make it easier to cross reference the original dataset and specificaly the 'features_info.txt' file that describe the original feature selection
 
 Note: Angle features in the original dataset, while a difference with a mean and standard deviation, were not considered a mean or a standard deviation to be selected as a variable per coursera instructions since they are a angle(~difference) and not a mean or sd per se.
+
 Dimensions: 180 rows (6 subjects * 30 activities) with 68 variables (66 selected mean and sd features, plus subject and activity variables)
 Variable	Details
 "subject"	The id of the test subject as a factor ("1"-"30")
+
 "activity"	The activity label performed as a factor (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+
 "tBodyAcc-mean()-X"	The mean of this feature range [-1,1]
 "tBodyAcc-mean()-Y"	The mean of this feature range [-1,1]
 "tBodyAcc-mean()-Z"	The mean of this feature range [-1,1]
