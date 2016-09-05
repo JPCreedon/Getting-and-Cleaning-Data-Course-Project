@@ -1,86 +1,30 @@
-#Raw data
+#The Data:
 
-A full description is available at the site where the data was obtained: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+The dataset includes the following files:
 
-Processed data:
+'README.txt'
 
-All data are unitless since features have been normalized in the original raw data
+'features_info.txt': Shows information about the variables used on the feature vector.
 
-Subjects have been converted to a factor ("1"-to-"30"")
+'features.txt': List of all features.
 
-For all original features that were a mean and a standard deviation, the mean across subject and activity has been calculated and stored in a variable named with the same label of the feature as found in the 'features.txt' file of original dataset , with the belief/hope to make it easier to cross reference the original dataset and specificaly the 'features_info.txt' file that describe the original feature selection
+'activity_labels.txt': Links the class labels with their activity name.
 
-Note: Angle features in the original dataset, while a difference with a mean and standard deviation, were not considered a mean or a standard deviation to be selected as a variable per coursera instructions since they are a angle(~difference) and not a mean or sd per se.
+'train/X_train.txt': Training set.
 
-Dimensions: 180 rows (6 subjects * 30 activities) with 68 variables (66 selected mean and sd features, plus subject and activity variables)
-Variable	Details
-"subject"	The id of the test subject as a factor ("1"-"30")
+'train/y_train.txt': Training labels.
 
-"activity"	The activity label performed as a factor (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+'test/X_test.txt': Test set.
 
-"tBodyAcc-mean()-X"	The mean of this feature range [-1,1]
-"tBodyAcc-mean()-Y"	The mean of this feature range [-1,1]
-"tBodyAcc-mean()-Z"	The mean of this feature range [-1,1]
-"tBodyAcc-std()-X"	The mean of this feature range [-1,1]
-"tBodyAcc-std()-Y"	The mean of this feature range [-1,1]
-"tBodyAcc-std()-Z"	The mean of this feature range [-1,1]
-"tGravityAcc-mean()-X"	The mean of this feature range [-1,1]
-"tGravityAcc-mean()-Y"	The mean of this feature range [-1,1]
-"tGravityAcc-mean()-Z"	The mean of this feature range [-1,1]
-"tGravityAcc-std()-X"	The mean of this feature range [-1,1]
-"tGravityAcc-std()-Y"	The mean of this feature range [-1,1]
-"tGravityAcc-std()-Z"	The mean of this feature range [-1,1]
-"tBodyAccJerk-mean()-X"	The mean of this feature range [-1,1]
-"tBodyAccJerk-mean()-Y"	The mean of this feature range [-1,1]
-"tBodyAccJerk-mean()-Z"	The mean of this feature range [-1,1]
-"tBodyAccJerk-std()-X"	The mean of this feature range [-1,1]
-"tBodyAccJerk-std()-Y"	The mean of this feature range [-1,1]
-"tBodyAccJerk-std()-Z"	The mean of this feature range [-1,1]
-"tBodyGyro-mean()-X"	The mean of this feature range [-1,1]
-"tBodyGyro-mean()-Y"	The mean of this feature range [-1,1]
-"tBodyGyro-mean()-Z"	The mean of this feature range [-1,1]
-"tBodyGyro-std()-X"	The mean of this feature range [-1,1]
-"tBodyGyro-std()-Y"	The mean of this feature range [-1,1]
-"tBodyGyro-std()-Z"	The mean of this feature range [-1,1]
-"tBodyGyroJerk-mean()-X"	The mean of this feature range [-1,1]
-"tBodyGyroJerk-mean()-Y"	The mean of this feature range [-1,1]
-"tBodyGyroJerk-mean()-Z"	The mean of this feature range [-1,1]
-"tBodyGyroJerk-std()-X"	The mean of this feature range [-1,1]
-"tBodyGyroJerk-std()-Y"	The mean of this feature range [-1,1]
-"tBodyGyroJerk-std()-Z"	The mean of this feature range [-1,1]
-"tBodyAccMag-mean()"	The mean of this feature range [-1,1]
-"tBodyAccMag-std()"	The mean of this feature range [-1,1]
-"tGravityAccMag-mean()"	The mean of this feature range [-1,1]
-"tGravityAccMag-std()"	The mean of this feature range [-1,1]
-"tBodyAccJerkMag-mean()"	The mean of this feature range [-1,1]
-"tBodyAccJerkMag-std()"	The mean of this feature range [-1,1]
-"tBodyGyroMag-mean()"	The mean of this feature range [-1,1]
-"tBodyGyroMag-std()"	The mean of this feature range [-1,1]
-"tBodyGyroJerkMag-mean()"	The mean of this feature range [-1,1]
-"tBodyGyroJerkMag-std()"	The mean of this feature range [-1,1]
-"fBodyAcc-mean()-X"	The mean of this feature range [-1,1]
-"fBodyAcc-mean()-Y"	The mean of this feature range [-1,1]
-"fBodyAcc-mean()-Z"	The mean of this feature range [-1,1]
-"fBodyAcc-std()-X"	The mean of this feature range [-1,1]
-"fBodyAcc-std()-Y"	The mean of this feature range [-1,1]
-"fBodyAcc-std()-Z"	The mean of this feature range [-1,1]
-"fBodyAccJerk-mean()-X"	The mean of this feature range [-1,1]
-"fBodyAccJerk-mean()-Y"	The mean of this feature range [-1,1]
-"fBodyAccJerk-mean()-Z"	The mean of this feature range [-1,1]
-"fBodyAccJerk-std()-X"	The mean of this feature range [-1,1]
-"fBodyAccJerk-std()-Y"	The mean of this feature range [-1,1]
-"fBodyAccJerk-std()-Z"	The mean of this feature range [-1,1]
-"fBodyGyro-mean()-X"	The mean of this feature range [-1,1]
-"fBodyGyro-mean()-Y"	The mean of this feature range [-1,1]
-"fBodyGyro-mean()-Z"	The mean of this feature range [-1,1]
-"fBodyGyro-std()-X"	The mean of this feature range [-1,1]
-"fBodyGyro-std()-Y"	The mean of this feature range [-1,1]
-"fBodyGyro-std()-Z"	The mean of this feature range [-1,1]
-"fBodyAccMag-mean()"	The mean of this feature range [-1,1]
-"fBodyAccMag-std()"	The mean of this feature range [-1,1]
-"fBodyBodyAccJerkMag-mean()"	The mean of this feature range [-1,1]
-"fBodyBodyAccJerkMag-std()"	The mean of this feature range [-1,1]
-"fBodyBodyGyroMag-mean()"	The mean of this feature range [-1,1]
-"fBodyBodyGyroMag-std()"	The mean of this feature range [-1,1]
-"fBodyBodyGyroJerkMag-mean()"	The mean of this feature range [-1,1]
-"fBodyBodyGyroJerkMag-std()"	The mean of this feature range [-1,1]
+'test/y_test.txt': Test labels.
+
+The following files are available for the train and test data. Their descriptions are equivalent.
+
+'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
+
+'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis.
+
+'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration.
+
+'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
+
